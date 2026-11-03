@@ -1,0 +1,6 @@
+healthcare_quality_analysis_cicd
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
