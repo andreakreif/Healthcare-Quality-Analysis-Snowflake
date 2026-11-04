@@ -2,7 +2,7 @@ with
 
 source as (
   
-    select * from {{ source('synthea','raw_patients') }}
+    select * from {{ source('synthea','patients') }}
 
 ),
 

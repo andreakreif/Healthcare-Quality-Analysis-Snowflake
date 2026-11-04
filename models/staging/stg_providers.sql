@@ -1,6 +1,6 @@
 with source as (
 	select *
-	from {{ source('synthea', 'raw_providers') }}
+	from {{ source('synthea', 'providers') }}
 ),
 renamed as (
     select
