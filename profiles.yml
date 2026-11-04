@@ -1,4 +1,4 @@
-healthcare_quality_analysis_cicd
+healthcare_quality_analysis_cicd:
   target: dev
   outputs:
     dev:
