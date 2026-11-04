@@ -1,5 +1,5 @@
-name: healthcare_quality_analysis_CICD
-profile: healthcare_quality_analysis_CICD
+name: healthcare_quality_analysis_cicd
+profile: healthcare_quality_analysis_cicd
 
 seed-paths: ["seeds"]
 model-paths: ["models"]
