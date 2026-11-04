@@ -1,12 +1,12 @@
 with source as (
 	select *
-	from {{ source('synthea', 'raw_encounters') }}
+	from {{ ref('encounters') }}
 ),              
 renamed as (
 	select
 		Id as encounter_id,
-		Start_ts as start_ts,
-		Stop_ts as stop_ts,
+		Start as start_ts,
+		Stop as stop_ts,
 		Patient as patient_id,
 		Organization as organization_id,
 		Provider as provider_id,
