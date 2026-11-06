@@ -1,6 +1,6 @@
 with source as (
 	select *
-	from {{ ref('encounters') }}
+	from {{source('synthea','encounters') }}
 ),              
 renamed as (
 	select
