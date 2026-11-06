@@ -1,0 +1,62 @@
+version: 2
+
+
+sources:
+  - name: synthea
+    schema: "main_raw"
+    description: Synthetic healthcare data rom the Synthea project
+    tables:
+      - name: encounters
+        description: One record per provider-patient encounter
+        config:
+          loaded_at_field: stop
+        columns:
+          - name: encounter_id
+            description: Unique identifier for each encounter
+            data_tests:
+             - not_null
+      - name: patients
+        description: One record per patient
+        columns:
+          - name: patient_id
+            description: Unique identifier for each patient
+            data_tests:
+             - not_null
+      - name: conditions
+        description: one record per encounter, patient, condition code
+        columns:
+          - name: condition_id
+            description: Unique identifier for each condition
+            data_tests:
+             - not_null
+      - name: observations
+        description: One record per date, encounter, patient,code, value
+        config:
+          loaded_at_field: date
+        columns:
+          - name: observation_id
+            description: Unique identifier for each observation
+            data_tests:
+              - not_null
+      - name: providers
+        description: One record per provider
+        columns:
+          - name: provider_id
+            description: Unique identifier for each provider
+            data_tests:
+             - not_null
+      - name: organizations
+        description: One record per organization
+        columns:
+          - name: organization_id
+            description: Unique identifier for each organization
+            data_tests:
+              - not_null
+      - name: payers
+        description: One record per payer
+        columns:
+          - name: payer_id
+            description: Unique identifier for each payer
+            data_tests:
+              - not_null
+
